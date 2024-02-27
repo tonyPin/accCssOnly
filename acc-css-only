@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    .accordion {
+      margin: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+    }
+
+    .accordion-label {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      background: #333;
+      color: #fff;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      padding: 0 1em;
+      background: white;
+      transition: all 0.35s;
+    }
+
+    input:checked~.accordion-content {
+      max-height: none;
+      padding: 1em;
+    }
+
+    .accordion-label::after {
+      content: '\002B';
+      /* content: '+'; */
+      font-weight: 800;
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      vertical-align: middle;
+      padding: 5px;
+      /* transition: all 0.35s; */
+
+    }
+
+    input:checked~.accordion-label::after {
+      content: '\2212';
+      /* content: '-'; */
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="accordion">
+    <input type="checkbox" id="tab1" />
+    <label class="accordion-label" for="tab1">PSVR2</label>
+    <div class="accordion-content">
+      Gaming just got real. With graphics powered by your PS5, the VR2 headset pulls you into a different world.
+      It uses
+      two
+      4K OLED displays to fill your field of view with sharp, vibrant images. And they run at up to 120 Hz refresh
+      rate
+      for
+      super smooth and realistic motion. That's sharp and smooth enough to make you forget about the outside
+      world. But,
+      to
+      draw you even further in, there's Tempest 3D audio that'll put planes over your head and creepers behind
+      your
+      back. And
+      the included VR2 Sense controllers have the excellent haptic feedback you're used to from your PS5's
+      controllers.
+      Put it
+      all together and it'll look, sound and feel like you're in the game.
+    </div>
+  </div>
+
+</body>
+
+</html>
